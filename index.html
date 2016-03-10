@@ -1,0 +1,45 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html;  charset=iso-8859-2">
+	<script src="jquery.js"></script><!-- Wczytanie jquery -->
+	<script src="qery.js"></script><!-- Wczytanie formatowania używającego jquery -->
+	</head>	
+<body>
+<div id="jeden">
+	<h2>#1 CronJobs</h2>
+	<script language="javascript" type="text/javascript" src="ajax.js"></script> <!-- Wczytanie pliku odpowiedzialnego za ajaxa->wyświetlenie pliku -->
+	<input type=button onclick="popup()"  value="Make" ><!-- Wykonaj ekstrakcje-->
+	<input type=button onclick="popup1()"  value="Show"><!-- Pokaż plik z wyekstrachowanymi danymi -->
+	<div id="tresc">Miejsce na plik</div><!-- Tu pojawią się dane -->
+</div>
+  
+<div id="dwa">
+  <script language="javascript" type="text/javascript" src="websocket.js"></script><!-- Skrypt odp.za zestawienie połączenia 
+  i ustawienia odpowiednich funkcji  -->
+  <h2>#2 WebSocket Test</h2>
+  <input type="text" id="wiad" value="Wiadomosc"><!-- Tu wpisujemy wiadomość -->
+  <input id="but1"type=button onclick="Polacz()"  value="Connect" > <!-- Łączymy się z serwerem po rozłączeniu -->
+  <input id="but2" type=button onclick="onDisconnect()"  value="Disconnect" ><!-- Kończymy połączenie -->
+  <input id="but3" type=button onclick="Send()"  value="Send" ><!-- Wysyłamy wiadomość do serwera -->
+  <div id="output"></div><!-- Nasza rozmowa z serwerem -->
+</div>
+
+<div id="trzy">
+  <h2>#3 WebWorker Test</h2>
+	<form>
+      <div>
+        <label for="number1">Multiply number 1: </label>    
+        <input type="text" id="number1" value="0"><!-- Wczytanie danej nr 1-->
+      </div>
+      <div>
+        <label for="number2">Multiply number 2: </label>   
+        <input type="text" id="number2" value="0"><!-- Wczytanie danej nr 2-->
+      </div>
+	  <input type=button id="guzik"  value="Make" > <!-- Uruchomienie wykonania operacji w wątku roboczym-->
+	</form>
+	  <p class="result">Result: 0</p>
+	  <script src="webworker.js"></script><!-- Wczytanie obsługi tworzenia i samego tworzenia webworkera -->
+</div>
+	
+</body>
+</html>
