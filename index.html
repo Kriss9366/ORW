@@ -3,29 +3,41 @@
 	<meta http-equiv="Content-Type" content="text/html;  charset=iso-8859-2">
 	<script src="jquery.js"></script><!-- Wczytanie jquery -->
 	<script src="qery.js"></script><!-- Wczytanie formatowania używającego jquery -->
+	<link rel="stylesheet" href="boot/css/bootstrap.min.css">
+	 <script src="js/bootstrap.min.js"></script>
 	</head>	
 <body>
-<div id="jeden">
-	<h2>#1 CronJobs</h2>
+ <div class="container">
+  <div class="jumbotron">
+  <img style="float:right" src="img/tree.jpg" class="img-circle" width="150" height="115">
+    <h1>My  Page</h1>
+    <p>Welcome !</p>
+	 
+  </div>
+  <div class="row" >
+    <div id="jeden" class="col-sm-4" >
+      <h2>#1 CronJobs</h2>
 	<script language="javascript" type="text/javascript" src="ajax.js"></script> <!-- Wczytanie pliku odpowiedzialnego za ajaxa->wyświetlenie pliku -->
-	<input type=button onclick="popup()"  value="Make" ><!-- Wykonaj ekstrakcje-->
-	<input type=button onclick="popup1()"  value="Show"><!-- Pokaż plik z wyekstrachowanymi danymi -->
+	<div class="btn-group btn-group-xs btn-group-vertical">
+	<input class="btn btn-default" type=button onclick="popup()"  value="Make" ><!-- Wykonaj ekstrakcje-->
+	<input class="btn btn-info" type=button onclick="popup1()"  value="Show"><!-- Pokaż plik z wyekstrachowanymi danymi -->
+	</div>
 	<div id="tresc">Miejsce na plik</div><!-- Tu pojawią się dane -->
-</div>
-  
-<div id="dwa">
-  <script language="javascript" type="text/javascript" src="websocket.js"></script><!-- Skrypt odp.za zestawienie połączenia 
+    </div>
+    <div class="col-sm-4" id="dwa" >
+      <script language="javascript" type="text/javascript" src="websocket.js"></script><!-- Skrypt odp.za zestawienie połączenia 
   i ustawienia odpowiednich funkcji  -->
   <h2>#2 WebSocket Test</h2>
   <input type="text" id="wiad" value="Wiadomosc"><!-- Tu wpisujemy wiadomość -->
-  <input id="but1"type=button onclick="Polacz()"  value="Connect" > <!-- Łączymy się z serwerem po rozłączeniu -->
-  <input id="but2" type=button onclick="onDisconnect()"  value="Disconnect" ><!-- Kończymy połączenie -->
-  <input id="but3" type=button onclick="Send()"  value="Send" ><!-- Wysyłamy wiadomość do serwera -->
+  <div class="btn-group">
+  <input id="but1" class="btn btn-success btn-lg" type=button onclick="Polacz()"  value="Connect" > <!-- Łączymy się z serwerem po rozłączeniu -->
+  <input id="but2" class="btn btn-warning" type=button onclick="onDisconnect()"  value="Disconnect" ><!-- Kończymy połączenie -->
+  </div>
+  <input id="but3" class="btn btn-info btn-xs" type=button onclick="Send()"  value="Send" ><!-- Wysyłamy wiadomość do serwera -->
   <div id="output"></div><!-- Nasza rozmowa z serwerem -->
-</div>
-
-<div id="trzy">
-  <h2>#3 WebWorker Test</h2>
+    </div>
+    <div class="col-sm-4" id="trzy">
+      <h2>#3 WebWorker Test</h2>
 	<form>
       <div>
         <label for="number1">Multiply number 1: </label>    
@@ -35,10 +47,29 @@
         <label for="number2">Multiply number 2: </label>   
         <input type="text" id="number2" value="0"><!-- Wczytanie danej nr 2-->
       </div>
-	  <input type=button id="guzik"  value="Make" > <!-- Uruchomienie wykonania operacji w wątku roboczym-->
+	  <input class="btn btn-danger" type=button id="guzik"  value="Make" > <!-- Uruchomienie wykonania operacji w wątku roboczym-->
 	</form>
 	  <p class="result">Result: 0</p>
 	  <script src="webworker.js"></script><!-- Wczytanie obsługi tworzenia i samego tworzenia webworkera -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div >
+	
+</div>
+  
+<div >
+  
+</div>
+
+<div >
+  
 </div>
 	
 </body>

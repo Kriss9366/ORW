@@ -37,6 +37,7 @@ r.send(null);//Wys³anie polecenia pobrania pliku na serwer
 function popup() {//wykonanie skryptu php
 document.location.href = "cronjob.php?start=true"
 }
+//setInterval(popup(), 180000);
 
 function popup1() {
 //Wyœwietlenie pobranych danych w odpowiednio sformatowanym "miejscu"
